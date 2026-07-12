@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "oxc",
+    "eslint",
+    "unicorn",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "es2022": true,
+    "jest": true
+  },
+  "categories": {
+    "correctness": "error",
+    "security": "error",
+    "perf": "warn",
+    "suspicious": "warn",
+    "pedantic": "off"
+  },
+  "rules": {
+    "eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "eslint/no-console": "off",
+    "unicorn/no-null": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/**",
+    "**/node_modules/**",
+    "coverage/**",
+    "dist/**"
+  ]
+}
